@@ -1,0 +1,13 @@
+#countLabel {
+    display: block;
+    text-align: center;
+    font-size: 150px;
+    padding-top: 75px;
+}
+
+#increaseButton {
+    display: block;
+    font-size: 50px;
+    width: 150px;
+    align-items: center;
+}
