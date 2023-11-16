@@ -15,7 +15,7 @@ loadAudio();
 let count = 0;
 
 document.getElementById("increaseButton").onclick = function() {
-    // Determine the increment value based on the current count
+    //gera þannig að það bætist alltaf 1 við, svo seinna 2, svo seinna 3...
     let increment = 1;
     if (count >= 100000) {
         increment = 1000;
@@ -31,18 +31,17 @@ document.getElementById("increaseButton").onclick = function() {
         increment = 2;
     }
 
-    // Increase count by the determined increment
     count += increment;
     document.getElementById("countLabel").innerHTML = count;
 
-    // Play sound using Web Audio API
+    // Spila hljóðið með Web Audio API
     let source = audioContext.createBufferSource();
     source.buffer = audioBuffer;
     source.connect(audioContext.destination);
     source.start();
 };
 
-// Ensure the sound continues
+//passa að hljóðið heldur áfram
 document.addEventListener('click', function() {
     if (audioContext.state === 'suspended') {
         audioContext.resume();
