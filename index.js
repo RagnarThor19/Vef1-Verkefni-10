@@ -15,17 +15,34 @@ loadAudio();
 let count = 0;
 
 document.getElementById("increaseButton").onclick = function() {
-    count++;
+    // Determine the increment value based on the current count
+    let increment = 1;
+    if (count >= 100000) {
+        increment = 1000;
+    } else if (count >= 10000) {
+        increment = 100;
+    } else if (count >= 1000) {
+        increment = 10;
+    } else if (count >= 500) {
+        increment = 5;
+    } else if (count >= 300) {
+        increment = 3;
+    } else if (count >= 100) {
+        increment = 2;
+    }
+
+    // Increase count by the determined increment
+    count += increment;
     document.getElementById("countLabel").innerHTML = count;
 
-    //Spila hljóðið með að nota Web Audio API
+    // Play sound using Web Audio API
     let source = audioContext.createBufferSource();
     source.buffer = audioBuffer;
     source.connect(audioContext.destination);
     source.start();
 };
 
-//passar að hljóðið heldur áfram
+// Ensure the sound continues
 document.addEventListener('click', function() {
     if (audioContext.state === 'suspended') {
         audioContext.resume();

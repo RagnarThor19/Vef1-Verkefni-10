@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VeryOriginalClickingGame</title>
-    <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="dist\output.css"-->
+    <link rel="stylesheet" href="dist\output.css">
+    <link rel="icon" type="image/png" href="images\icon.jpg">
+
 </head>
 <body>
-    <p id="title">VeryOriginalClickingGame</p>
-    <label id="countLabel">0</label>
-    <button id="increaseButton">+</button>
+    <div class="text-center font-bold font-mono text-6xl pt-14">
+        <p id="title">VeryOriginalClickingGame</p>
+    </div>
+
+    <div class="text-center text-9xl font-bold font-mono pt-12">
+        <label id="countLabel">0</label>
+    </div>
+
+    <!-- Button container -->
+    <div class="flex justify-center">
+        <!-- Button element -->
+        <button id="increaseButton" class="text-3xl bg-gray-950 hover:bg-gray-900 text-white font-bold py-3 px-10 box mt-12 shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+            +
+        </button>
+    </div>
+
     <script src="index.js"></script>
-    <p id="msg">sound on pls</p>
+
+    <div class="text-center pt-72 font-mono font-bold">
+        <p id="msg">sound on pls</p>
+    </div>
 </body>
 </html>
