@@ -1,7 +1,7 @@
 # Vef1-Verkefni-10
 Verkefni 10 í Vefforitun 1
 
-Netlify: 
+Netlify: https://zingy-pavlova-6259b7.netlify.app/
 
 Ég notaði Web Audio API, setti það upp þannig að hvert skipti að maður ýtir á takkann þá heyrist hljóð
 
