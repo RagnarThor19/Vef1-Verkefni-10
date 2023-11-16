@@ -11,3 +11,13 @@
     width: 150px;
     margin:auto;
 }
+#title {
+display: block;
+font-size: 70px;
+text-align: center;
+}
+#msg {
+    display:block;
+    margin-top: 150px;
+    text-align: center;
+}
